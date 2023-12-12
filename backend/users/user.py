@@ -72,3 +72,40 @@ class User(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Your login logic goes here
+        # Example: Check credentials and set user_id in session
+        session['user_id'] = 1  # Replace with your actual user ID
+        return redirect(url_for('dashboard'))
+
+    return render_template('login.html')
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        # Your signup logic goes here
+        # Example: Create a new user and set user_id in session
+        session['user_id'] = 1  # Replace with your actual user ID
+        return redirect(url_for('dashboard'))
+
+    return render_template('signup.html')
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
+
+@app.route('/dashboard')
+def dashboard():
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+
+    user_id = session['user_id']
+    user = User.query.get(user_id)
+    return render_template('dashboard.html', user=user)
+
+if __name__ == '__main__':
+    app.run(debug=True)
