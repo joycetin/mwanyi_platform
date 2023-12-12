@@ -1,0 +1,150 @@
+/* CSS for Login component */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form {
+    
+    width: 60%;
+    height: 70%;
+    margin-left: 100px;
+    margin-top: 50px;
+    background-color: rgb(250, 250, 249);
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4)
+}
+
+.section {
+    background-color: #ffffff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+
+
+.sign{
+    color: rgb(106, 200, 134);
+    
+}
+
+button {
+    background-color: rgb(193, 244, 208);
+    color: #070707;
+    padding: 10px 15px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 170px;
+    border: 1px solid #a3a2a2;
+    border-radius: 20px;
+}
+
+.phs {
+   
+    color: rgb(80, 80, 80);
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.line {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    color: #f2f3f2;
+    text-decoration: none;
+}
+
+input[type="text"]:hover + .error-message,
+input[type="password"]:hover + .error-message,
+input[type="text"]:hover + .success-message,
+input[type="password"]:hover + .success-message,
+input[type="email"]:hover + .error-message,
+input[type="email"]:hover + .success-message {
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .section {
+        width: 90%;
+        padding: 10px;
+    }
+
+    button {
+        margin-top: 15px;
+    }
+}
+
+p {
+    margin-left: 350px;
+}
+
+.login_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.leaf{
+    filter: drop-shadow(8px 8px 15px rgba(0, 0, 0, 0.5));
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ebe9e9;
+    border: none; /* Remove the white border */
+    border-radius: 20px; /* Set the border radius to 20px */
+}
+
+.acc{
+    margin-left: 50px;
+}
